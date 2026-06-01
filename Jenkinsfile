@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        MAVEN_OPTS = '-Xms256m -Xmx512m'
+    }
 
     tools {
         // This must match the name you gave to Maven in Jenkins -> Manage Jenkins -> Global Tool Configuration
